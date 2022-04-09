@@ -25,6 +25,8 @@
         <commons-io.version>2.7</commons-io.version>
         <aspectj.version>1.9.6</aspectj.version>
         <slf4j.version>1.7.30</slf4j.version>
+        <yandex.version>2.1</yandex.version>
+        <allure-commandline.version>2.8.1</allure-commandline.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     </properties>
@@ -86,6 +88,20 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-report-builder</artifactId>
+            <version>${yandex.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-commandline</artifactId>
+            <version>${allure-commandline.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>com.github.automatedowl</groupId>
             <artifactId>allure-environment-writer</artifactId>

@@ -44,14 +44,29 @@ public class JoinUsPage extends PageBase {
 
     public void getAllPositions() {
         List<WebElement> maxNumOfPositions = driver.findElements(By.xpath("//*[@id=\"content\"]/section/div[2]/article"));
-        for (int index = 1; index <= maxNumOfPositions.size(); index++) {
-            String textPositionValue = driver.findElement(By.xpath("(//h2[@class='card-jobsHot__title'])[" + index + "]"))
-                    .getAttribute("data-alt");
-            String textURLvalue = driver.findElement(By.xpath("(//a[contains(@href,'www.musala.com/job')])[" + index + "]"))
-                    .getAttribute("href");
-            System.out.println("Position: " + textPositionValue);
-            System.out.println("URL: " + textURLvalue);
+        if (driver.getCurrentUrl().contains("Sofia")) {
+            System.out.println("Sofia");
+            for (int index = 1; index <= maxNumOfPositions.size(); index++) {
+                String textPositionValue = driver.findElement(By.xpath("(//h2[@class='card-jobsHot__title'])[" + index + "]"))
+                        .getAttribute("data-alt");
+                String textURLvalue = driver.findElement(By.xpath("(//a[contains(@href,'www.musala.com/job')])[" + index + "]"))
+                        .getAttribute("href");
+                System.out.println("Position: " + textPositionValue);
+                System.out.println("URL: " + textURLvalue);
+            }
         }
+        else if (driver.getCurrentUrl().contains("Skopje")){
+            System.out.println("Skopje");
+            for (int index = 1; index <= maxNumOfPositions.size(); index++) {
+                String textPositionValue = driver.findElement(By.xpath("(//h2[@class='card-jobsHot__title'])[" + index + "]"))
+                        .getAttribute("data-alt");
+                String textURLvalue = driver.findElement(By.xpath("(//a[contains(@href,'www.musala.com/job')])[" + index + "]"))
+                        .getAttribute("href");
+                System.out.println("Position: " + textPositionValue);
+                System.out.println("URL: " + textURLvalue);
+            }
+        }
+
     }
 
 }
