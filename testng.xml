@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="4">
+    <test verbose="2" preserve-order="true" name="Musala/src/test/java/Tests/TestCase1.java">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Tests.TestCase1">
+                <methods>
+                    <include name="contactUs"/>
+                    <include name="contactUs1"/>
+                    <include name="contactUs2"/>
+                    <include name="contactUs3"/>
+                    <include name="contactUs4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Musala/src/test/java/Tests/TestCase2.java">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Tests.TestCase2">
+                <methods>
+                    <include name="companyPageTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Musala/src/test/java/Tests/TestCase3.java">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Tests.TestCase3">
+                <methods>
+                    <include name="CareersTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Musala/src/test/java/Tests/TestCase4.java">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Tests.TestCase4">
+                <methods>
+                    <include name="getOpeningPositions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
