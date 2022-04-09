@@ -25,10 +25,6 @@ public class JoinUsPage extends PageBase {
         return result;
     }
 
-    public void print(){
-        System.out.println(maxNumOfPositions.size());
-    }
-
     public void selectLocationAnyWhere() {
         selectData(ddlLocation, 6);
     }
@@ -47,6 +43,7 @@ public class JoinUsPage extends PageBase {
     }
 
     public void getAllPositions() {
+        List<WebElement> maxNumOfPositions = driver.findElements(By.xpath("//*[@id=\"content\"]/section/div[2]/article"));
         for (int index = 1; index <= maxNumOfPositions.size(); index++) {
             String textPositionValue = driver.findElement(By.xpath("(//h2[@class='card-jobsHot__title'])[" + index + "]"))
                     .getAttribute("data-alt");
