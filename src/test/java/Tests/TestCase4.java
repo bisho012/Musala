@@ -10,7 +10,7 @@ public class TestCase4 extends TestBase{
         homePage.clickCareers();
         careersPage.clickCheckPositions();
         joinUsPage.selectLocationSofia();
-        joinUsPage.printNumOfPositions();
+        joinUsPage.print();
         joinUsPage.getAllPositions();
     }
 }
